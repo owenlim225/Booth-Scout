@@ -1,0 +1,90 @@
+import { demoEvent } from "@/lib/demo/events";
+import type { Booth } from "@/types/demo";
+
+const slug = demoEvent.slug;
+
+export const demoBooths: Booth[] = [
+  {
+    id: "stellar-hub",
+    eventSlug: slug,
+    sponsorName: "Stellar Development Foundation",
+    name: "Stellar Hub",
+    boothNumber: "A1",
+    category: "Infrastructure",
+    description: "Flagship booth covering Stellar core, Soroban, and ecosystem grants.",
+    officialUrl: "https://stellar.org",
+    adminVerified: true,
+    requirement: "Show your Freighter address and follow @StellarOrg.",
+    swag: "Stellar tote + sticker pack",
+    fallbackNote: "If line is long, return after lunch for the quick-claim lane.",
+  },
+  {
+    id: "soroban-lab",
+    eventSlug: slug,
+    sponsorName: "Soroban Labs",
+    name: "Soroban Lab",
+    boothNumber: "A2",
+    category: "Developer Tools",
+    description: "Hands-on smart contract demos and a short contract quiz.",
+    adminVerified: true,
+    requirement: "Complete the 2-minute contract quiz.",
+    swag: "Limited enamel pin",
+    fallbackNote: "Ask for the paper quiz if tablets are out of battery.",
+  },
+  {
+    id: "wallet-square",
+    eventSlug: slug,
+    sponsorName: "Freighter",
+    name: "Wallet Square",
+    boothNumber: "B3",
+    category: "Wallets",
+    description: "Wallet onboarding station with a campaign QR scan.",
+    adminVerified: false,
+    requirement: "Install the app and scan the campaign QR.",
+    swag: "Phone stand",
+    fallbackNote: "Use the buddy referral lane for faster onboarding.",
+  },
+  {
+    id: "dex-district",
+    eventSlug: slug,
+    sponsorName: "StellarX",
+    name: "DEX District",
+    boothNumber: "B4",
+    category: "DeFi",
+    description: "Testnet swap simulator and liquidity walkthroughs.",
+    adminVerified: false,
+    requirement: "Run one testnet swap simulation.",
+    swag: "Branded tumbler",
+    fallbackNote: "Capture a screenshot first in case the kiosk disconnects.",
+  },
+  {
+    id: "builder-alley",
+    eventSlug: slug,
+    sponsorName: "Build on Stellar",
+    name: "Builder Alley",
+    boothNumber: "C5",
+    category: "Education",
+    description: "Lightning talks and starter-kit downloads for new builders.",
+    adminVerified: true,
+    requirement: "Attend the 5-minute lightning talk.",
+    swag: "Notebook + lanyard",
+    fallbackNote: "Collect a stamp from the side desk if the session is full.",
+  },
+  {
+    id: "validator-lounge",
+    eventSlug: slug,
+    sponsorName: "Validator Collective",
+    name: "Validator Lounge",
+    boothNumber: "C6",
+    category: "Infrastructure",
+    description: "Validator uptime trivia with a comfy lounge to recharge.",
+    adminVerified: false,
+    requirement: "Answer the validator uptime trivia.",
+    swag: "Socks + keycap",
+    fallbackNote: "Trivia repeats every 20 minutes near the LED wall.",
+  },
+];
+
+export function getBoothById(id: string): Booth | undefined {
+  return demoBooths.find((booth) => booth.id === id);
+}

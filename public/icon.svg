@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="BoothScout icon">
+  <rect width="256" height="256" rx="48" fill="#09090b" />
+  <path d="M56 72h144v28H56zM56 116h144v28H56zM56 160h88v28H56z" fill="#22d3ee" />
+  <circle cx="186" cy="174" r="22" fill="#34d399" />
+</svg>
